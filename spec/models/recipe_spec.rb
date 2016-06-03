@@ -14,7 +14,7 @@ RSpec.describe Recipe, :type => :model do
   end
 
   it "has many tags" do
-  tags = Tag.create(:name)
+  tags = Tag.create(name: "chicken")
   expect(recipe.tags.first).to eq(tag)
   end
 
