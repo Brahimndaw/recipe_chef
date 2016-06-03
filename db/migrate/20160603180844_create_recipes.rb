@@ -5,7 +5,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.string :source_url 
       t.string :image_url
 
-      t.timestamps null: false
+      t.timestamps 
     end
   end
 end

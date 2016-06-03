@@ -1,1 +1,5 @@
-tag.rb
+class Tag < ActiveRecord::Base
+
+
+
+end
