@@ -14,4 +14,6 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require rebound
+//= require jquery.isotope.min
 //= require_tree .
