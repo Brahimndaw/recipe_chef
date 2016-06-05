@@ -39,7 +39,7 @@ end
 private
   
   def recipe_params
-    params.require(:recipe).permit(:video_url, :title, :description)
+    params.require(:recipe).permit(:video_url, :title, :description, :all_tags)
   end
 
   def find_recipe
