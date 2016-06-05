@@ -1,8 +1,19 @@
-
+<div class="row">
+<div class="text-center">
+<h1> Recipes to Love</h1>
+</div>
+</div>
+<br><br>
+<div class="row">
 <% @recipes.all.each do |recipe| %>
-<%= recipe.title %>
+  <div class="col-md-4" align="center">
+<a href="<%= recipe_path(recipe)%>"> <img src="<%=recipe.video_url%>" height="250", width="250"><br>
+<%= link_to recipe.title, recipe %><br>
+<%= link_to recipe.description, recipe %><br>
 <br>
-<%= recipe.source_url %>
-<br>
-<%= recipe.image_url %>
+</div>
 <% end %>
+</div>
+
+
+

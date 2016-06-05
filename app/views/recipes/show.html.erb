@@ -1,1 +1,13 @@
-show.html.erb
+<div class="row">
+<div class= "col-md-4">
+
+<img src="<%=@recipe.video_url%>" height="500" width="500"> <br>
+<div class"img" align="center">
+<%= @recipe.title %> <br>
+<%= @recipe.description %> <br>
+</div>
+</div>
+</div>
+
+
+<%= link_to "Remove Recipe", recipe_path(@recipe), method: :delete, class: "btn btn-danger" %> 
