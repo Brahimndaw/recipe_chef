@@ -39,8 +39,7 @@ def user_login
     visit '/'
     click_link('Sign in')
     expect(current_path).to eq('/signin')
-    select "Luigo", :from => "user[id]"
-    click_button('Sign In')
+    click_button('login')
     expect(current_path).to eq('/users/1')
     expect(page).to have_content("Luigo")
     expect(page).to have_content("lui")
