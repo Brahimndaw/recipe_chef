@@ -3,7 +3,6 @@ class RecipesController < ApplicationController
   before_action :find_recipe, only: [:show, :edit, :update, :destroy]
 
   def search
-    binding.pry
     @recipes = SearchCreator.create_search(params)
     if @recipes.nil?
       flash[:danger] = "Sorry, no results"
