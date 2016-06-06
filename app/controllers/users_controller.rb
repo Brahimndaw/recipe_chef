@@ -21,6 +21,7 @@ class UsersController < ApplicationController
       if @user.save
         session[:user_id] = @user.id
         flash[:success] = "Welcome to recipe chef"
+        redirect_to @user
       else
         redirect_to new_user_path
       end
