@@ -26,11 +26,14 @@ expect(page).to have_content("superm")
 end
 
 
+it "can successfully sign a user up" do
+user_signup
+end
 
 
 
 def user_login
-    @luigi = User.create(
+    @mindy = User.create(
       name: "Luigo",
       password: "password",
       username: "lui",
@@ -39,31 +42,36 @@ def user_login
     visit '/'
     click_link('Sign in')
     expect(current_path).to eq('/signin')
-    select "Luigo", :from => "user[id]"
-    click_button('Sign In')
-    expect(current_path).to eq('/users/1')
+    fill_in('username', :with => "lui")
+    fill_in('password', :with => "password")
+    click_button('login')
     expect(page).to have_content("Luigo")
     expect(page).to have_content("lui")
     expect(page).to have_content("lui@lg.com")
   end
 
 
+  it "allows a user to login" do
+    user_login
+  end
+
   it 'has a link to log out from the users/show page' do
     user_signup
     expect(page).to have_content("Log Out")
   end
 
-  it 'redirects to home page after logging out' do
-    user_signup
-    click_link("Log Out")
-    expect(root_url).to eq(root_url)
+  it 'links to the the recipe page' do
+  user_signup
+  expect(page).to have_content("Recipes")
+  end
+
+  it 'links to the the User show page' do
+  user_signup
+  expect(page).to have_content("Recipes")
   end
 
 
-  it "successfully destroys session hash when 'Log Out' is clicked" do
-    user_login
-    click_link("Log Out")
-    expect(current_path).to eq(root_url)
-  end
+
+  
 
 end
