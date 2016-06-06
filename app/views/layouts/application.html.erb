@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>RecipeChef</title>
-  
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rebound - Responsive Portfolio Theme for Twitter Bootstrap. Responsive HTML5, CSS3 and jQuery.">
     <meta name="author" content="Pukeko Design Studio">
-    
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/sample/logo-144.png">
@@ -23,6 +23,7 @@
 <%= render "layouts/navbar" %>
 <%= render "layouts/messages" %>
 <%= yield %>
+</div>
 
 </body>
 </html>

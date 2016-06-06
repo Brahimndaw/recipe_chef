@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
 ole_recipe = Recipe.create(video_url: "https://i.ytimg.com/vi/ny9QFscbt7I/maxresdefault.jpg", title: "Parmegani", description: "bou dien")
 dumbaya = Recipe.create(video_url: "https://antiguanvegan.files.wordpress.com/2012/02/fried-plantain.jpg", title: "Plantain", description: "bou dien")
 comozone = Recipe.create(video_url: "http://cuisinedecheznous.net/wp-content/uploads/2015/12/ttttttttt.jpg", title: "Tchep", description: "Bou dien")
@@ -20,6 +21,3 @@ comozonet = Recipe.create(video_url: "http://img1.10bestmedia.com/Images/Photos/
 comozoney = Recipe.create(video_url: "http://cdn.vkool.com/wp-content/uploads/2015/01/chicken-cordon-bleu-II.jpg", title: "Tchep", description: "Bou dien")
 comozoneu = Recipe.create(video_url: "http://img1.10bestmedia.com/Images/Photos/69933/maximilien-restaurant-oysters-seattle_54_990x660_201405311608.jpg", title: "Tchep", description: "Bou dien")
 comozonei = Recipe.create(video_url: "http://www.organicauthority.com/wp-content/uploads/2014/06/5493212723_fd599dc479_z.jpg", title: "Tchep", description: "Bou dien")
-
-
-

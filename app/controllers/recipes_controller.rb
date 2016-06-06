@@ -1,8 +1,15 @@
 class RecipesController < ApplicationController
   before_action :find_recipe, only: [:show, :edit, :update, :destroy]
 
+  def search
+    Adapter::FoodAPIWrapper.new(params[:query])
+    @recipes = Recipe.where("name LIKE ?", params[:query])
+    binding.pry
+    redirect_to search_form_path
+  end
+
   def index
-  @recipes = Recipe.all 
+  @recipes = Recipe.all
   end
 
   def new
@@ -21,7 +28,7 @@ class RecipesController < ApplicationController
    else
     flash[:danger] = "You're recipe was not created, please try again."
    end
-end 
+end
 
   def edit
 
@@ -37,7 +44,7 @@ end
   end
 
 private
-  
+
   def recipe_params
     params.require(:recipe).permit(:video_url, :title, :description, :all_tags)
   end

@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   resources :users
-
   resources :recipes
+  resources :ingredients
+
+  get '/search-form', to: 'home#search_form'
+  post '/search', to: 'recipes#search'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
