@@ -16,6 +16,7 @@ module Adapter
         end
       end
       recipe_details_array.each do |recipe_info|
+        binding.pry
         add_recipe_to_database(recipe_info) if recipe_not_in_database(recipe_info["title"])
       end
     end
