@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get '/search-form', to: 'home#search_form'
   post '/search', to: 'recipes#search'
+   get 'tags/:tag', to: 'recipes#index', as: :tag
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -9,7 +9,11 @@ class RecipesController < ApplicationController
   end
 
   def index
-  @recipes = Recipe.all
+    if params[:tag]
+      @recipes = Recipe.tagged_with(params[:tag])
+    else
+      @recipes = Recipe.all
+    end
   end
 
   def new
@@ -35,8 +39,14 @@ end
   end
 
   def update
-    @recipe.update(recipe_params)
-    redirect_to @recipe
+
+    if @recipe.update(recipe_params)
+    flash[:success] = "You have successfully updated your recipe"
+    redirect_to recipe_path(@recipe)
+    else
+    flash[:danger] = "Please check the required fields and try again"
+    redirect_to :back
+   end
   end
 
   def destroy
@@ -47,7 +57,7 @@ end
 private
 
   def recipe_params
-    params.require(:recipe).permit(:video_url, :title, :description, tags_attributes: [:name])
+    params.require(:recipe).permit(:video_url, :title, :description, :tag_list)
   end
 
   def find_recipe
