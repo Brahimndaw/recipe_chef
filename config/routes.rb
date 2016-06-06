@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'tags/show'
+  root 'static_pages#home'
 
-  root 'recipes#index'
-
-  post '/login', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
+  get "/signin", to: "sessions#new"
+  post "sessions/create", to: "sessions#create"
+  delete "/signout", to: "sessions#destroy"
 
   resources :users
   resources :recipes
@@ -14,6 +13,7 @@ Rails.application.routes.draw do
   get '/search-form', to: 'home#search_form'
   post '/search', to: 'recipes#search'
    get 'tags/:tag', to: 'recipes#index', as: :tag
+   get 'tags/show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

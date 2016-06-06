@@ -1,14 +1,7 @@
 <div id="form">
-<%= form_for :user, url: '/users', remote: true do |f| %>
-  Your Name: <%= f.text_field :name %><br />
-  Your E-mail: <%= f.text_field :email %><br />
-  Your Desired Username: <%= f.text_field :username %><br />
-  Password: <%= f.password_field :password %><br />
-  Password Confirmation: <%= f.password_field :password_confirmation %><br />
-  <%= f.submit "Submit" %><br />
-<% end %>
-</div>
-<br />
+
+<%= render 'form' %>
+
 Already have an account? <%= link_to "Click here.", root_path %>
 
 <div id="notification">
