@@ -23,10 +23,10 @@ class RecipesController < ApplicationController
   def create
    @recipe = Recipe.create(recipe_params)
    if @recipe.save
-    flash[:sucess] = "You have successfully created your recipe."
+    flash[:success] = "You have successfully created your recipe."
     redirect_to recipes_path
    else
-    flash[:danger] = "You're recipe was not created, please try again."
+    flash[:danger] = "Your recipe was not created, please try again."
    end
 end
 
@@ -35,7 +35,8 @@ end
   end
 
   def update
-  @recipe = recipe.update()
+    @recipe.update(recipe_params)
+    redirect_to @recipe
   end
 
   def destroy
@@ -46,7 +47,7 @@ end
 private
 
   def recipe_params
-    params.require(:recipe).permit(:video_url, :title, :description, :all_tags)
+    params.require(:recipe).permit(:video_url, :title, :description, tags_attributes: [:name])
   end
 
   def find_recipe
