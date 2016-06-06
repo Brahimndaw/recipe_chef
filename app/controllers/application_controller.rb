@@ -18,4 +18,8 @@ class ApplicationController < ActionController::Base
   def logged_in?
     !!current_user
   end
+
+  def user_signed_id?
+
+  end
 end

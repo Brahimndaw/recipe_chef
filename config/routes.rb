@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'users#new'
 
+  get 'tags/show'
+
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 

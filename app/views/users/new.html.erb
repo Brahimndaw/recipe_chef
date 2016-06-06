@@ -1,32 +1,7 @@
 <div id="form">
-<%= form_for :user, url: '/users', remote: true do |f| %>
-  <div>
-      <%= f.label :name %> <br>
-      <%= f.text_field :name %> <br>
-    </div>
-    <div>
-      <%= f.label :username %> <br>
-      <%= f.text_field :username %> <br>
-    </div>
-    <div>
-      <%= f.label :email %> <br>
-      <%= f.text_field :email %> <br>
-    </div>
-    <div>
-      <%= f.label :password %> <br>
-      <%= f.password_field :password %> <br>
-    </div>
-    <div>
-      <%= f.label :password_confirmation %> <br>
-      <%= f.password_field :password_confirmation %> <br>
-    </div>
-    
-  <br>
-  <br>
-  <%= f.submit "Submit" %>
-<% end %>
-</div>
-<br />
+
+<%= render 'form' %>
+
 Already have an account? <%= link_to "Click here.", root_path %>
 
 <div id="notification">
