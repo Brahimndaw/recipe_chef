@@ -8,4 +8,12 @@ class SessionsController < ApplicationController
       redirect_to new_user_path
     end
   end
+
+  def destroy
+    session.delete(:user_id)
+    flash.discard
+    flash[:danger] = "You are logged out"
+    redirect_to root_url
+  end
+  
 end
