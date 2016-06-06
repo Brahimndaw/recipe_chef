@@ -7,7 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-ole_recipe = Recipe.create(video_url: "https://i.ytimg.com/vi/ny9QFscbt7I/maxresdefault.jpg", title: "Parmegani", description: "bou dien", tag_list: "Amuse")
+ole_recipe = Recipe.create(video_url: "https://i.ytimg.com/vi/ny9QFscbt7I/maxresdefault.jpg", title: "Parmegani", 
+  description:
+ "1. Preheat oven to 400ºF/200ºC.
+2. In a medium bowl mix together ricotta, pesto, salt, pepper, parmesan, breadcrumbs, and the egg.
+3. Butterfly fillet the 2 center cuts of salmon.
+4. Stuff the mixture into the salmon, pushing edges of stuffing in as much as possible.
+5. Spray a medium size baking sheet and lay stuffed salmon it.
+6. Cook in the oven for 12-15 minutes or until stuffing begins to brown.", tag_list: "Amuse")
 dumbaya = Recipe.create(video_url: "https://antiguanvegan.files.wordpress.com/2012/02/fried-plantain.jpg", title: "Plantain", description: "Fried Bananas", tag_list: "fried")
 comozone = Recipe.create(video_url: "http://cuisinedecheznous.net/wp-content/uploads/2015/12/ttttttttt.jpg", title: "Tchep", description: "Senegalese Dish", tag_list: "Fish")
 comozone2 = Recipe.create(video_url: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg", title: "The Meats", description: "All types of meaty food", tag_list: "Meat")

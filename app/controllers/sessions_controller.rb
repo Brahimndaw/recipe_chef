@@ -1,18 +1,26 @@
 class SessionsController < ApplicationController
+  
+  def new
+    @user = User.new
+    @user = User.all
+  end
+
+
   def create
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
-      login(@user)
+      session[:user_id] = @user.id
+      flash[:success] = "Welcome to Chefs Recipes"
       redirect_to user_path(@user)
     else
-      redirect_to new_user_path
+      flash[:danger] = "Your user or password are invalid"
+      redirect_to signin_path
     end
   end
 
+
     def destroy
-    session.delete(:user_id)
-    flash.discard
-    flash[:danger] = "You are logged out"
+    session[:user_id] = nil
     redirect_to root_url
   end
   
