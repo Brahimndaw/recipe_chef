@@ -1,0 +1,48 @@
+<%= form_for @user do |f| %>
+
+
+ <% if @user.errors.any? %>
+   <div id="error_explanation">
+    <div class="alert alert-danger fade-in">
+     <h3>
+       Please correct the following errors:
+     </h3>
+     <ul>
+     <% @user.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+     <% end %>
+     </ul>
+   </div>
+ <% end %>
+
+<br>
+<br>
+<br>
+
+<div>
+      <%= f.label :name %> <br>
+      <%= f.text_field :name %> <br>
+    </div>
+    <div>
+      <%= f.label :username %> <br>
+      <%= f.text_field :username %> <br>
+    </div>
+    <div>
+      <%= f.label :email %> <br>
+      <%= f.text_field :email %> <br>
+    </div>
+    <div>
+      <%= f.label :password %> <br>
+      <%= f.password_field :password %> <br>
+    </div>
+    <div>
+      <%= f.label :password_confirmation %> <br>
+      <%= f.password_field :password_confirmation %> <br>
+    </div>
+    
+  <br>
+  <br>
+  <%= f.submit "Submit" %>
+<% end %>
+</div>
+<br />
