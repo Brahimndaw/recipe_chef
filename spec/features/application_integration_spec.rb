@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-
  describe 'GET /recipes - recipe index' do
    it 'gets all recipes' do
      visit '/recipes'
@@ -13,21 +12,27 @@ require 'spec_helper'
 
  describe 'POST /search - Search function' do
 
-   let(:user) { User.create(username: "Mario", name: "Mario", email: "mario@mario.com") }
-
-   before(:each) do
-     binding.pry
-     allow_any_instance_of(RecipesController).to receive(:current_user).and_return(user)
-     @plantain = Recipe.create(title: "plantain")
-   end
-
-   it 'searches titles' do
-     visit '/recipes'
-     binding.pry
-     within('.navbar-form') do
-       fill_in(:q, :with => 'plantain')
-       find('#search-submit').click
+   def user_login
+       @luigi = User.create(
+         name: "Luigo",
+         password: "password",
+         username: "lui",
+         email: 'lui@lg.com',
+       )
+       visit '/'
+       click_link('Sign in')
+       expect(current_path).to eq('/signin')
+       fill_in("username", :with => "lui")
+       fill_in("password", :with => "password")
+       click_button('login')
      end
-     expect(page).to have_text("plantain")
-   end
+
+    it 'searches titles' do
+     user_login
+      within('.navbar-form') do
+       fill_in(:q, :with => 'plantain')
+        find('#search-submit').click
+      end
+      expect(page).to have_text("plantain")
+    end
  end
