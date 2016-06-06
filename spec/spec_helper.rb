@@ -17,6 +17,10 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+ENV["RAILS_ENV"] ||= 'test'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+
 require 'capybara/rails'
 require 'capybara/rspec'
 
@@ -24,13 +28,7 @@ require 'capybara/rspec'
 RSpec.configure do |config|
 
   config.include Capybara::DSL
-  config.order = 'default'
 
-  def app
-    Rack::Builder.parse_file('config.ru').first
-  end
-
-  Capybara.app = app
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

@@ -4,9 +4,9 @@
 </div>
 </div>
 <br><br>
-<div class="row">
+<div class="row" id="recipe-list">
 <% @recipes.all.each do |recipe| %>
-  <div class="col-md-4" align="center">
+  <div class="col-md-4" align="center" id="individual-recipe">
 <a href="<%= recipe_path(recipe)%>"> <img src="<%=recipe.video_url%>" height="250", width="250"><br>
 <%= link_to recipe.title, recipe %><br>
 <p> Tags: <%= raw recipe.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
@@ -14,6 +14,3 @@
 </div>
 <% end %>
 </div>
-
-
-
