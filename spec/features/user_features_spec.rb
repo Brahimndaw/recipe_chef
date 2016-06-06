@@ -30,17 +30,17 @@ end
 
 
 def user_login
-    @mindy = User.create(
+    @luigi = User.create(
       name: "Luigo",
       password: "password",
       username: "lui",
       email: 'lui@lg.com',
     )
     visit '/'
-    click_link('Log in')
+    click_link('Sign in')
     expect(current_path).to eq('/signin')
     select "Luigo", :from => "user[id]"
-    click_button('Log In')
+    click_button('Sign In')
     expect(current_path).to eq('/users/1')
     expect(page).to have_content("Luigo")
     expect(page).to have_content("lui")
@@ -61,9 +61,9 @@ def user_login
 
 
   it "successfully destroys session hash when 'Log Out' is clicked" do
-    user_signup
+    user_login
     click_link("Log Out")
-    expect(root_url).to eq(root_url)
+    expect(current_path).to eq(root_url)
   end
 
 end
