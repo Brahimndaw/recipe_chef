@@ -28,11 +28,9 @@ require 'spec_helper'
      end
 
     it 'searches titles' do
-     user_login
-      within('.navbar-form') do
-       fill_in(:q, :with => 'plantain')
-        find('#search-submit').click
-      end
+      user_login
+      fill_in(:q, :with => 'plantain')
+      find('#search-submit').click
       expect(page).to have_text("plantain")
     end
  end
