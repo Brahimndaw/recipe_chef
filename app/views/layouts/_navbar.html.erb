@@ -20,14 +20,14 @@
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Search" name="q" value="" />
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="submit"><span class="fa fa-search"></span></button>
+                    <button class="btn btn-default" type="submit" id="search-submit"><span class="fa fa-search"></span></button>
                   </span>
                 </div><!-- end input group -->
               </form><!-- end navbar-form -->
               <ul class="nav navbar-nav filter-portfolio">
 
                 <li class="title">Tags</li>
-              <% Tag.all.sort_by{|tag| tag.name}.each do |tag| %>
+              <% TagDecorator.sorted.each do |tag| %>
               <li><%= link_to tag.name, tag_path(tag.name) %> (<%= tag.taggings_count%>)</li>
               <% end %>
               </ul>
