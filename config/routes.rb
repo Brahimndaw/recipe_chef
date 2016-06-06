@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'recipes#index'
+  root 'users#new'
 
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'

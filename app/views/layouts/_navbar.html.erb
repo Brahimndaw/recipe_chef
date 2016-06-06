@@ -13,6 +13,7 @@
                 <li> <%= link_to "Home", root_url%></li>
                 <li> <%= link_to "Chefs", users_path%></li>
                  <li> <%= link_to "Recipes", recipes_path%></li>
+                  <li><%= link_to "Log Out", logout_path, method: :delete %></li>
               </ul>
               <form class="navbar-form" role="search" action="/search" method="post">
                 <div class="input-group">
@@ -23,13 +24,11 @@
                 </div><!-- end input group -->
               </form><!-- end navbar-form -->
               <ul class="nav navbar-nav filter-portfolio">
-                <li class="title">Work</li>
-                <li class="active"><a href="#none" data-filter="*">All</a> <span>(123)</span></li>
-                <li><a href="tags/chicken" >Chicken</a> <span>(9)</span></li>
-                <li><a href="tags/meat">Meat</a> <span>(7)</span></li>
-                <li><a href="tags/fish" data-filter=".music">Fish</a> <span>(22)</span></li>
-                <li><a href="tags/seafood" data-filter=".art">Seafood</a> <span>(7)</span></li>
-                <li><a href="tags/vegetarians" data-filter=".social">Vegetarians</a> <span>(49)</span></li>
+
+                <li class="title">Tags</li>
+              <% Tag.all.sort_by{|tag| tag.name}.each do |tag| %>
+              <li><%= link_to tag.name, tag_path(tag.name) %> (<%= tag.taggings_count%>)</li>
+              <% end %>
               </ul>
               <ul class="nav navbar-nav nav-social hidden-sm hidden-xs">
                 <li class="title">Social</li>

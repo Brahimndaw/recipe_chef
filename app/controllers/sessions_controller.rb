@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy
+    def destroy
     session.delete(:user_id)
     flash.discard
     flash[:danger] = "You are logged out"
