@@ -27,10 +27,10 @@ class RecipesController < ApplicationController
   def create
    @recipe = Recipe.create(recipe_params)
    if @recipe.save
-    flash[:sucess] = "You have successfully created your recipe."
+    flash[:success] = "You have successfully created your recipe."
     redirect_to recipes_path
    else
-    flash[:danger] = "You're recipe was not created, please try again."
+    flash[:danger] = "Your recipe was not created, please try again."
    end
 end
 
@@ -39,6 +39,7 @@ end
   end
 
   def update
+
     if @recipe.update(recipe_params)
     flash[:success] = "You have successfully updated your recipe"
     redirect_to recipe_path(@recipe)
