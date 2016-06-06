@@ -12,6 +12,8 @@ require 'spec_helper'
 
  describe 'POST /search - Search function' do
 
+   let(:recipe) {Recipe.create(name: "plantain")}
+
    def user_login
        @luigi = User.create(
          name: "Luigo",
