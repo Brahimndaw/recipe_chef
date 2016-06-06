@@ -50,6 +50,7 @@ end
   end
 
   def destroy
+    binding.pry
     @recipe.destroy
     redirect_to recipes_path
   end
