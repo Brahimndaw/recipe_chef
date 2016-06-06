@@ -3,12 +3,17 @@
 
 <img src="<%=@recipe.video_url%>" height="500" width="500"> <br>
 <div class"img" align="center">
-<%= @recipe.title %> <br>
-<%= @recipe.description %> <br>
-<%= embed(product.youtube_url) %>  
-</div>
-</div>
-</div>
+<h3> Dish Name</h3>
+<font size="3"><%= @recipe.title %></font><br>
+<h3> Ingedients</h3>
+<font size="3"><%= @recipe.description %></font> <br>
+<h3> Preparation</h3>
 
-
+</div>
+</div>
+</div>
+<br><br>
+<div align="left">
 <%= link_to "Remove Recipe", recipe_path(@recipe), method: :delete, class: "btn btn-danger" %> 
+<%= link_to "Edit Recipe",  edit_recipe_path(@recipe), class: "btn btn-warning" %> 
+</div>

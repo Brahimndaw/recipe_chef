@@ -1,4 +1,4 @@
-<%=  form_for @recipe do |f| %>
+<%=  form_for (@recipe, remote: true) do |f| %>
  
 
  <div class= "field"> <%= f.label :video_url, "Video" %> <br>
@@ -9,6 +9,9 @@
 
   <div class="field"> <%= f.label :description, "Description" %> <br>
   <%= f.text_area :description %> </div>
+
+  <div class="field"> <%= f.label :all_tags%>
+  <%= f.text_field :all_tags %>
 
   
   <div class='action'> 
