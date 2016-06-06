@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
 
   def search
     # Adapter::FoodAPIWrapper.new(params[:query])
-    @recipes = Recipe.where("lower(title) LIKE ? OR tags LIKE ?", "%#{params[:q].downcase}%")
+    @recipes = Recipe.where("lower(title) LIKE ?", "%#{params[:q].downcase}%")
     if @recipes.nil?
       flash[:danger] = "Sorry, no results"
       redirect_to recipes_path
