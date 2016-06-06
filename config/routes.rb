@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'tags/show'
+
   root 'recipes#index'
 
   post '/login', to: 'sessions#create'
