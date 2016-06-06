@@ -70,8 +70,12 @@ def user_login
   expect(page).to have_content("Recipes")
   end
 
+<<<<<<< HEAD
 
 
   
 
 end
+=======
+end
+>>>>>>> 1defc872009947b935d34f3dd8bb9c14328f4695
