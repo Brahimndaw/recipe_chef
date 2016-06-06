@@ -21,3 +21,6 @@ comozonet = Recipe.create(video_url: "http://img1.10bestmedia.com/Images/Photos/
 comozoney = Recipe.create(video_url: "http://cdn.vkool.com/wp-content/uploads/2015/01/chicken-cordon-bleu-II.jpg", title: "Fish", description: "Mais c bon", tag_list: "Fish")
 comozoneu = Recipe.create(video_url: "http://img1.10bestmedia.com/Images/Photos/69933/maximilien-restaurant-oysters-seattle_54_990x660_201405311608.jpg", title: "Jambon", description: "Bou dien", tag_list: "seafood")
 comozonei = Recipe.create(video_url: "http://www.organicauthority.com/wp-content/uploads/2014/06/5493212723_fd599dc479_z.jpg", title: "Oysters", description: "Bou dien", tag_list: "seafood")
+
+mario = User.create(username: "Mario", name: "Mario Mario", email: "mario@mario.com", password_digest: "beef", image_url: "https://upload.wikimedia.org/wikipedia/en/9/99/MarioSMBW.png")
+luigi = User.create(username: "Luigi", name: "Luigi Mario", email: "luigi@luigi.com", password_digest: "beef", image_url: "https://upload.wikimedia.org/wikipedia/en/f/f1/LuigiNSMBW.png")
