@@ -11,12 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160606144832) do
+ActiveRecord::Schema.define(version: 20160606153452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "ratings", force: :cascade do |t|
+  end
+
+  create_table "recipe_amounts", force: :cascade do |t|
+    t.integer "recipes_id"
+    t.integer "ingredients_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -52,9 +57,10 @@ ActiveRecord::Schema.define(version: 20160606144832) do
     t.string   "username"
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                                                                                                    null: false
+    t.datetime "updated_at",                                                                                                    null: false
     t.string   "password_digest"
+    t.string   "image_url",       default: "https://pixabay.com/static/uploads/photo/2014/04/02/16/22/chef-307076_960_720.png"
   end
 
 end

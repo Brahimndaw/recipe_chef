@@ -3,8 +3,8 @@ class RecipesController < ApplicationController
   before_action :find_recipe, only: [:show, :edit, :update, :destroy]
 
   def search
-    # Adapter::FoodAPIWrapper.new(params[:query])
-    @recipes = Recipe.where("lower(title) LIKE ?", "%#{params[:q].downcase}%")
+    binding.pry
+    @recipes = SearchCreator.create_search(params)
     if @recipes.nil?
       flash[:danger] = "Sorry, no results"
       redirect_to recipes_path
