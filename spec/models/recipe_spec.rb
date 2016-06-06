@@ -4,8 +4,8 @@ RSpec.describe Recipe, :type => :model do
   let(:recipe) {
     Recipe.create(
     :title => "Old Fashion Donut",
-    :source_url => "oy",
-    :image_url => "yo"
+    :video_url => "oy",
+    :description => "yo"
     )
   }
 
