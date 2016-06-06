@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-ole_recipe = Recipe.create(video_url: "https://i.ytimg.com/vi/ny9QFscbt7I/maxresdefault.jpg", title: "Parmegani", 
+ole_recipe = Recipe.create(video_url: "https://i.ytimg.com/vi/ny9QFscbt7I/maxresdefault.jpg", title: "Parmegani",
   description:
  "1. Preheat oven to 400ºF/200ºC.
 2. In a medium bowl mix together ricotta, pesto, salt, pepper, parmesan, breadcrumbs, and the egg.
@@ -16,7 +16,7 @@ ole_recipe = Recipe.create(video_url: "https://i.ytimg.com/vi/ny9QFscbt7I/maxres
 5. Spray a medium size baking sheet and lay stuffed salmon it.
 6. Cook in the oven for 12-15 minutes or until stuffing begins to brown.", tag_list: "Amuse")
 dumbaya = Recipe.create(video_url: "https://antiguanvegan.files.wordpress.com/2012/02/fried-plantain.jpg", title: "Plantain", description: "1 Quart of oil, 2 plantains", tag_list: "fried")
-comozone = Recipe.create(video_url: "http://cuisinedecheznous.net/wp-content/uploads/2015/12/ttttttttt.jpg", title: "Tchep", description: 
+comozone = Recipe.create(video_url: "http://cuisinedecheznous.net/wp-content/uploads/2015/12/ttttttttt.jpg", title: "Tchep", description:
   "2 mulets vidés, écaillés et coupés en morceaux
 50 g de poisson séché
 350 g de riz
@@ -58,3 +58,6 @@ comozonei = Recipe.create(video_url: "http://www.organicauthority.com/wp-content
 
 mario = User.create(username: "Mario", name: "Mario Mario", email: "mario@mario.com", password_digest: "beef", image_url: "https://upload.wikimedia.org/wikipedia/en/9/99/MarioSMBW.png")
 luigi = User.create(username: "Luigi", name: "Luigi Mario", email: "luigi@luigi.com", password_digest: "beef", image_url: "https://upload.wikimedia.org/wikipedia/en/f/f1/LuigiNSMBW.png")
+mario.recipes << ole_recipe
+mario.recipes << dumbaya
+mario.save
