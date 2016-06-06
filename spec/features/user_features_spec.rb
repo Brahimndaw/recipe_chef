@@ -31,7 +31,6 @@ user_signup
 end
 
 
-
 def user_login
     @mindy = User.create(
       name: "Luigo",

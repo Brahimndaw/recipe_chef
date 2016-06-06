@@ -3,7 +3,10 @@
             <article>
               <div class="page-header page-header-resume">
                 <img src="<%= @user.image_url%>" alt="" title="" />
-                <h1><%= @user.name%></h1>
+                <h1><%= @user.username%></h1>
+                <h2><%= @user.name %><h2>
+                <h3><%= @user.email %></h3>
+
               </div><!-- end page-header -->
             </article><!-- end article -->
           </div><!-- end page -->
@@ -20,6 +23,3 @@
           </div>
         </div><!-- end col -->
 
-<%= @user.username %>
-<%= @user.name %>
-<%= @user.email %>
