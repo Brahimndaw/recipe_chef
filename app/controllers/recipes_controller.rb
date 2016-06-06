@@ -1,26 +1,40 @@
 class RecipesController < ApplicationController
-  def index
-  @recipes = Recipe.all 
+
+  def search
+    Adapter::FoodAPIWrapper.new(params[:query])
+    @recipes = Recipe.where("name LIKE ?", params[:query])
+    binding.pry
+    redirect_to search_form_path
   end
 
-  def new
-   @recipe = Recipe.new()
-  end
+  # private
 
-  def create
- @recipe = Recipe.create()
-  end
+  # def search_params
+  #   params.require(:search).permit(:q)
+  # end
 
-  def edit
-
-  end
-
-  def update
-  @recipe = recipe.update()
-  end
-
-  def destroy
-  end
+ #  def index
+ #  @recipes = Recipe.all
+ #  end
+ #
+ #  def new
+ #   @recipe = Recipe.new()
+ #  end
+ #
+ #  def create
+ # @recipe = Recipe.create()
+ #  end
+ #
+ #  def edit
+ #
+ #  end
+ #
+ #  def update
+ #  @recipe = recipe.update()
+ #  end
+  #
+  # def destroy
+  # end
 
 
 end
