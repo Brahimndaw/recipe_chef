@@ -29,6 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rest-client'
 gem 'factory_girl_rails'
+gem 'faker'
+gem 'shoulda'
 gem 'rails_serve_static_assets'
 
 gem 'figaro'
