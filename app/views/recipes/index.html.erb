@@ -1,16 +1,23 @@
 <div class="row">
 <div class="text-center">
-<h1><img src="https://s-media-cache-ak0.pinimg.com/236x/70/09/19/7009193184270fbdef1d81ee0a55a3ba.jpg" height="250", width="250"> </h1>
+
+<h1> <img src="https://s-media-cache-ak0.pinimg.com/236x/70/09/19/7009193184270fbdef1d81ee0a55a3ba.jpg" height="200" width="200"></h1>
+
 </div>
 </div>
 <br><br>
 <div class="row" id="recipe-list">
 <% @recipes.all.each do |recipe| %>
   <div class="col-md-4" align="center" id="individual-recipe">
-<a href="<%= recipe_path(recipe)%>"> <img src="<%=recipe.video_url%>" height="250", width="250"><br>
-<%= link_to recipe.title, recipe %><br>
+<font size="6"> <%= link_to recipe.title, recipe %><br></font>
+<a href="<%= recipe_path(recipe)%>"> <iframe src="<%= recipe.video_url%>" width="350" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
+
+<%= rating_for recipe, "delizioso" %>
 <p> Tags: <%= raw recipe.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 <br>
 </div>
 <% end %>
 </div>
+
+

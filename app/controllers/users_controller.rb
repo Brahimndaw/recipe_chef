@@ -1,19 +1,14 @@
 class UsersController < ApplicationController
 
-  before_action :set_user, only: [:show, :edit]
+  before_action :set_user, only: [:show, :edit, :update]
 
   def index
-  @users = User.all
+    @users = User.all
   end
 
   def new
     @user = User.new
   end
-
-  def edit
-  end
-
-
 
 
   def create
@@ -29,6 +24,19 @@ class UsersController < ApplicationController
 
   def show
   end
+
+  def edit
+  end
+
+  def update
+    if @user.update(user_params)
+      flash[:success]= "You have succesfully updated your user"
+      redirect_to @user
+    else
+      flash[:danger] = "Update failed please check your paramters"
+    end
+  end
+
 
   private
 

@@ -1,18 +1,21 @@
-<div class="row">
-<div class= "col-md-4">
+<div class="row" align="center">
+<div class= "col-md-8">
 
-<img src="<%=@recipe.video_url%>" height="500" width="500"> <br>
+<iframe src="<%= @recipe.video_url%>" width="560" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 <div class"img" align="center">
-<h3> <u> Dish Name</u></h3>
-<font size="3"><%= @recipe.title %></font><br>
-<h3> <u> Ingedients</u></h3>
-<font size="3"><u><%= @recipe.description %></u></font> <br>
-
-</div>
-</div>
+<h2> <u> Dish Name</u></h2>
+<font size="5"><%= @recipe.title %></font><br>
+<article>
+<h2> <u> Ingedients</u></h2>
+<p>
+<font size="3"><u><%= @recipe.description %></u></font> 
+<article>
 </div>
 <br><br>
-<div align="left">
-<%= link_to "Remove Recipe", recipe_path(@recipe), method: :delete, class: "btn btn-danger" %> 
+<font size="5"><b><u>Delizioso : <%= rating_for_user @recipe, current_user, "delizioso",  disable_after_rate: false %></b></u></font>
+<br><br>
+<div class="row" align="middle">
+<%= link_to "Remove Recipe", recipe_path(@recipe), method: :delete, class: "btn btn-danger"%> 
 <%= link_to "Edit Recipe",  edit_recipe_path(@recipe), class: "btn btn-warning" %> 
+</div>
 </div>
