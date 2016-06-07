@@ -5,11 +5,12 @@
 <div class"img" align="center">
 <h2> <u> Dish Name</u></h2>
 <font size="5"><%= @recipe.title %></font><br>
-<div class="row" align="center">
+<article>
 <h2> <u> Ingedients</u></h2>
+<p>
 <font size="3"><u><%= @recipe.description %></u></font> 
+<article>
 </div>
-
 <br><br>
 <font size="5"><b><u>Delizioso : <%= rating_for_user @recipe, current_user, "delizioso",  disable_after_rate: false %></b></u></font>
 <br><br>

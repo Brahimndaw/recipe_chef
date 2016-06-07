@@ -6,7 +6,7 @@ RSpec.describe Recipe, :type => :model do
     :title => "Old Fashion Donut",
     :video_url => "oy",
     :description => "yo",
-    :tag_list => "chicken"
+    :tag_list => "Chicken"
     )
   }
 
@@ -15,7 +15,7 @@ RSpec.describe Recipe, :type => :model do
   end
 
   it "has many tags" do
-  tags = Tag.create(name: "chicken")
+  tags = Tag.create(name: "Meat", taggings_count: 0)
   expect(recipe.tags.first).to eq(tags)
   end
 
