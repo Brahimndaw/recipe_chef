@@ -9,7 +9,7 @@
 
 ole_recipe = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1760948114157830%2F&show_text=0&width=560", title: "Banana Cake",
   description: "", tag_list: "Desert")
-dumbaya = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedpropertasty%2Fvideos%2F1791781734367832%2F&show_text=0&width=560", title: "Marshmallow Doughnut", description: "", tag_list: "Snack")
+dumbaya = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedpropertasty%2Fvideos%2F1791781734367832%2F&show_text=0&width=560", title: "Mallow Doughnut", description: "", tag_list: "Snack")
 comozone = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1760899044162737%2F&show_text=0&width=560", title: "Shrimp Pasta", description:
   "3 gousses d’ail, 2 piments rouges, 4 c. à soupe de purée de tomate, 5 cl d’huile d’arachide,2 verres d'eau tiéde sel, poivre", tag_list: "Seafodd")
 comozone2 = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1760006490918659%2F&show_text=0&width=560", title: "Chicken Alfredo", description: "", tag_list: "Chicken")
