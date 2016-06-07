@@ -1,14 +1,16 @@
 
 <%=  form_for(@recipe) do |f| %>
 
+<div class="field">
+  <%= f.label :pics, "Upload pics!"%><br />
+  <%= f.file_field :pics, multiple: true %>
+</div>
+
  <div class= "field"> <%= f.label :video_url, "Video" %> <br>
   <%= f.url_field :video_url %> </div>
 
    <div class="field"> <%= f.label :title, "Title"  %><br>
   <%= f.text_field  :title %></div>
-
-  <div class="field"> <%= f.label :description, "Description" %> <br>
-  <%= f.text_area :description %> </div>
 
 
  <div class="field">
@@ -16,9 +18,9 @@
   <%= f.text_field :tag_list %>
 </div>
 
-<div class="field">
-  <%= f.label :pics, "Upload pics!"%><br />
-  <%= f.file_field :pics, multiple: true %>
+
+<div class="field"><%= f.label :time, "Duration" %> <br>
+<%= f.text_field :time %></div>
 
   <div class='action'>
   <%= f.submit %>
