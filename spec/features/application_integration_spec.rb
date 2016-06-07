@@ -3,7 +3,6 @@ require 'spec_helper'
  describe 'GET /recipes - recipe index' do
    it 'gets all recipes' do
      visit '/recipes'
-     expect(page.body).to include('Recipes to Love')
      within('#recipe-list') do
        expect(page).to have_selector('#individual-recipe', :count => Recipe.count)
      end
@@ -31,6 +30,7 @@ require 'spec_helper'
 
     it 'searches titles' do
       user_login
+      # binding.pry
       fill_in(:q, :with => 'plantain')
       find('#search-submit').click
       expect(page).to have_text("plantain")
