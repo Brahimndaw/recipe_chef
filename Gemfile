@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rest-client'
 gem 'factory_girl_rails'
+gem 'rails_serve_static_assets'
 
 gem 'figaro'
 gem 'acts-as-taggable-on', '~> 3.4'
