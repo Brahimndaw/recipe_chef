@@ -15,7 +15,8 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require rebound
+// require rebound
+//= require_tree ../../../vendor/assets/javascripts/.
 //= require jquery.isotope.min
 //= require jquery.raty
 //= require ratyrate
