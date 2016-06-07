@@ -26,12 +26,14 @@ comozoney = Recipe.create(video_url: "http://cdn.vkool.com/wp-content/uploads/20
 comozoneu = Recipe.create(video_url: "http://img1.10bestmedia.com/Images/Photos/69933/maximilien-restaurant-oysters-seattle_54_990x660_201405311608.jpg", title: "Jambon", description: "Bou dien", tag_list: "Seafood")
 comozonei = Recipe.create(video_url: "http://www.organicauthority.com/wp-content/uploads/2014/06/5493212723_fd599dc479_z.jpg", title: "Oysters", description: "Bou dien", tag_list: "Seafood")
 
-mario = User.create(username: "Mario", name: "Mario Mario", email: "mario@mario.com", password_digest: "beef", image_url: "https://upload.wikimedia.org/wikipedia/en/9/99/MarioSMBW.png")
 luigi = User.create(username: "Luigi Mario",name: "Luigi", email: "luigi@luigi.com", password_digest: "beef", image_url: "https://upload.wikimedia.org/wikipedia/en/f/f1/LuigiNSMBW.png")
 anthony = User.create(username:"Abourdain" , name:"Anthony Bourdain", email: "abourdain@cnn.com", password_digest: "beef", image_url: "http://comicsalliance.com/files/2012/06/bordainnoshadow.jpg")
 stella = User.create(username:"Stella", name: "Stella Morevecci", email: "stella@torino.com", password_digest:"beef", image_url:"http://classroomclipart.com/images/gallery/Clipart/Culinary/TN_lady-with-a-covered-food-tray-clipart-5122.jpg")
-dominec = User.create(username:"dominec", name: "dominec Glasgow", email: "domi@gmail.com", password_digest: "beef", image_url: "https://www.fivesquid.com/pics/t2/1440941227-44593-3-1.png")
+dominec = User.create(username:"Dominec", name: "dominec Glasgow", email: "domi@gmail.com", password_digest: "beef", image_url: "https://www.fivesquid.com/pics/t2/1440941227-44593-3-1.png")
+mario = User.create(username: "Mario", name: "Mario Mario", email: "mario@mario.com", password_digest: "beef", image_url: "https://upload.wikimedia.org/wikipedia/en/9/99/MarioSMBW.png")
 michelle = User.create(username:"Mich", name:"Michelle Pfeiffer", email: "mich@yahoo.com", password_digest: "beef", image_url:"http://www.toonpool.com/user/10854/files/michelle_pfeiffer_portrait_1285995.jpg")
+coolio = User.create(username: "Coolio", name: "Coolio Budz", email: "Coolio@yahoo.com", password_digest:"beef", image_url:"http://orig09.deviantart.net/1035/f/2014/269/0/5/lord_wilhelm_cartoon_self_portrait_by_lordwilhelm-d80kmo4.jpg")
+
 
 mario.recipes << ole_recipe
 mario.recipes << dumbaya
@@ -45,7 +47,7 @@ stella.recipes << comozoner
 anthony.recipes << comozone4
 dominec.recipes << comozonet
 dominec.recipes << comozoneu
-
+coolio.recipes << comozonei
 
 
 
@@ -55,3 +57,4 @@ anthony.save
 stella.save
 dominec.save
 michelle.save
+coolio.save

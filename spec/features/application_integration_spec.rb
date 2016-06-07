@@ -3,7 +3,6 @@ require 'spec_helper'
  describe 'GET /recipes - recipe index' do
    it 'gets all recipes' do
      visit '/recipes'
-     expect(page.body).to include('Recipes to Love')
      within('#recipe-list') do
        expect(page).to have_selector('#individual-recipe', :count => Recipe.count)
      end
@@ -12,7 +11,9 @@ require 'spec_helper'
 
  describe 'POST /search - Search function' do
 
-   let(:recipe) {Recipe.create(name: "plantain")}
+   before(:each) do
+     @recipe = Recipe.create(title: "plantain")
+   end
 
    def user_login
        @luigi = User.create(
