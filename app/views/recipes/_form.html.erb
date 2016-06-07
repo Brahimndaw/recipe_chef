@@ -16,8 +16,11 @@
   <%= f.text_field :tag_list %>
 </div>
 
+<div class="field">
+  <%= f.label :pics, "Upload pics!"%><br />
+  <%= f.file_field :pics, multiple: true %>
+
   <div class='action'>
   <%= f.submit %>
   </div>
   <% end %>
-
