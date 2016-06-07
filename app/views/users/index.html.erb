@@ -9,6 +9,7 @@
   <div class="col-md-4" align="center">
 <a href="<%= user_path(user)%>"> <img src="<%=user.image_url%>" height="250", width="250"><br>
 <%= link_to user.name, user_path(user) %><br>
+<%= rating_for user, "skills" %>
 <br>
 </div>
 <% end %>

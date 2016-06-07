@@ -8,6 +8,9 @@
 <h3> <u> Ingedients</u></h3>
 <font size="3"><u><%= @recipe.description %></u></font> <br>
 
+Speed  : <%= rating_for_user @recipe, current_user, "speed",  disable_after_rate: false %>
+Taste : <%= rating_for_user @recipe, current_user, "taste",  disable_after_rate: false %> 
+Cost  : <%= rating_for_user @recipe, current_user, "cost",  disable_after_rate: false  %>
 </div>
 </div>
 </div>
@@ -16,3 +19,5 @@
 <%= link_to "Remove Recipe", recipe_path(@recipe), method: :delete, class: "btn btn-danger" %> 
 <%= link_to "Edit Recipe",  edit_recipe_path(@recipe), class: "btn btn-warning" %> 
 </div>
+
+
