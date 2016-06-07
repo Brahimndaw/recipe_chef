@@ -20,7 +20,7 @@ class RecipesController < ApplicationController
   end
 
   def new
-   @recipe = Recipe.new
+    @recipe = Recipe.new
   end
 
   def show
@@ -28,32 +28,30 @@ class RecipesController < ApplicationController
 
 
   def create
-   @recipe = Recipe.create(recipe_params)
-   if @recipe.save
-    flash[:success] = "You have successfully created your recipe."
-    redirect_to recipes_path
-   else
-    flash[:danger] = "Your recipe was not created, please try again."
-   end
-end
+    @recipe = Recipe.create(recipe_params)
+    if @recipe.save
+      flash[:success] = "You have successfully created your recipe."
+      redirect_to recipes_path
+    else
+      flash[:danger] = "Your recipe was not created, please try again."
+      render :new
+    end
+  end
 
   def edit
-
   end
 
   def update
-
     if @recipe.update(recipe_params)
-    flash[:success] = "You have successfully updated your recipe"
-    redirect_to recipe_path(@recipe)
+      flash[:success] = "You have successfully updated your recipe"
+      redirect_to recipe_path(@recipe)
     else
-    flash[:danger] = "Please check the required fields and try again"
-    redirect_to :back
-   end
+      flash[:danger] = "Please check the required fields and try again"
+      render :edit
+    end
   end
 
   def destroy
-    binding.pry
     @recipe.destroy
     redirect_to recipes_path
   end
