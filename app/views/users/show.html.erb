@@ -1,25 +1,33 @@
 <div class="col-md-9 content">
-          <div class="page">
-            <article>
-              <div class="page-header page-header-resume">
-                <img src="<%= @user.image_url%>" alt="" title="" />
-                <h1><%= @user.username%></h1>
-                <h2><%= @user.name %><h2>
-                <h3><%= @user.email %></h3>
 
-              </div><!-- end page-header -->
-            </article><!-- end article -->
-          </div><!-- end page -->
+  <div class="page">
+    <article>
+      <div class="page-header page-header-resume">
+        <img src="<%= @user.image_url%>" alt="" title="" />
+        <h1><%= @user.name%></h1>
+        <h2><%= @user.username%><h2>
+          <ul class="email">
+           <li><%= @user.email %></a></li>
+          </ul>
+      </div><!-- end page-header -->
 
-          <div class="row">
-          <% @user.recipes.all.each do |recipe| %>
-            <div class="col-md-4" align="center">
-          <a href="<%= recipe_path(recipe)%>"> <img src="<%=recipe.video_url%>" height="250", width="250"><br>
-          <%= link_to recipe.title, recipe %><br>
-          <p> Tags: <%= raw recipe.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
-          <br>
-          </div>
-          <% end %>
-          </div>
-        </div><!-- end col -->
+
+  <div class="row">
+    <% if @user.recipes %>
+      <div class="page-header page-header-resume">
+    <h1>Recipes</h1>
+  </div>
+    <% end %>
+  <% @user.recipes.all.each do |recipe| %>
+    <div class="col-md-4" align="center">
+  <a href="<%= recipe_path(recipe)%>"> <img src="<%=recipe.video_url%>" height="250", width="250"><br>
+  <%= link_to recipe.title, recipe %><br>
+  <p> Tags: <%= raw recipe.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+  <br>
+</div><!-- end col-md-4 -->
+  <% end %>
+</div><!-- end row -->
+</article><!-- end article -->
+</div><!-- end page -->
+</div><!-- end col-mid-9 -->
 
