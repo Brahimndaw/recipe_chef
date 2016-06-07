@@ -49,7 +49,7 @@ comozone4 = Recipe.create(video_url: "http://easyscienceforkids.com/wp-content/u
 1⁄4 teaspoon salt", tag_list: "Desert")
 comozone6 = Recipe.create(video_url: "https://dianeyoon.files.wordpress.com/2012/11/dsc05509.jpg", title: "Steak Tartar", description: "Delecious rate meet", tag_list: "Meat")
 comozone7 = Recipe.create(video_url: "http://www.stethnews.com/wp-content/uploads/2015/02/Paris-France-Food-Health.jpg", title: "La tourr", description: "Perfect French desert", tag_list: "desert")
-comozonee = Recipe.create(video_url: "https://i.ytimg.com/vi/dWagwI7Z_Hw/maxresdefault.jpg", title: "Poisson", description: "Cremed sauce", tag_list: "Fish,Seafood")
+comozonee = Recipe.create(video_url: "https://i.ytimg.com/vi/dWagwI7Z_Hw/maxresdefault.jpg", title: "Poisson", description: "Cremed sauce", tag_list: "Fish")
 comozoner = Recipe.create(video_url: "https://omgsohungry.files.wordpress.com/2012/06/img_13501.jpg", title: "Pasta di maggie", description: "perfect pasta", tag_list: "Wheat")
 comozonet = Recipe.create(video_url: "http://img1.10bestmedia.com/Images/Photos/242906/Bistro-Bis-Facebook_54_990x660_201406012338.jpg", title: "Coquelette", description: "Un truc de ouf", tag_list: "seafood")
 comozoney = Recipe.create(video_url: "http://cdn.vkool.com/wp-content/uploads/2015/01/chicken-cordon-bleu-II.jpg", title: "Fish", description: "Mais c bon", tag_list: "Fish")

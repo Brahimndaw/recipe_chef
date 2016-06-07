@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
 
   validates_presence_of :username, :name, :email
   validates_uniqueness_of :username, :email
+  ratyrate_rateable "skills"
+   ratyrate_rater
 end
