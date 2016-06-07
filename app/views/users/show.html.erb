@@ -4,6 +4,7 @@
       <div class="page-header page-header-resume">
        <h2><%= @user.username%></h2>
         <img src="<%= @user.image_url%>" alt="" title="" />
+        <iframe src="<%= @user.video_url%>" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
       </div><!-- end page-header -->
 <div class="row" align ="center">
 Skills  : <%= rating_for @user, "skills",  disable_after_rate: false %>
