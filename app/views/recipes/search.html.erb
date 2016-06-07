@@ -7,7 +7,10 @@
 <div class="row">
 <% @recipes.each do |recipe| %>
   <div class="col-md-4" align="center">
-<a href="<%= recipe_path(recipe)%>"> <img src="<%=recipe.video_url%>" height="250", width="250"><br>
+  <a href="<%= recipe_path(recipe)%>">
+  <iframe src="<%=recipe.video_url%>" width="350" height="250"
+    style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"
+      allowFullScreen="true"></iframe><br>
 <%= link_to recipe.title, recipe %><br>
 <%= link_to recipe.description, recipe %><br>
 <br>
