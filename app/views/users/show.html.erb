@@ -2,12 +2,12 @@
   <div class="page">
     <article>
       <div class="page-header page-header-resume">
+       <h2><%= @user.username%><h2>
         <img src="<%= @user.image_url%>" alt="" title="" />
-        <h2><%= @user.username%><h2>
       </div><!-- end page-header -->
-
+<div class="row" align ="center">
 Skills  : <%= rating_for_user @user, current_user, "skills",  disable_after_rate: false %>
-
+</div>
   <div class="row">
     <% if @user.recipes %>
       <div class="page-header page-header-resume">
