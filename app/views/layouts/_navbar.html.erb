@@ -10,6 +10,7 @@
             </div><!-- end navbar-header -->
             <div class="collapse navbar-collapse" id="rebound-navbar-collapse">
               <ul class="nav navbar-nav">
+              <% if current_user %>
                 <li class="title">Menu</li>
                 <li> <%= link_to "Home", root_url %></li>
                 <li> <%=link_to "Profile", user_path(current_user) %>
@@ -43,3 +44,4 @@
         </div><!-- end col -->
            <div class="row">
           <div class="col-md-8">
+  <% end %>
