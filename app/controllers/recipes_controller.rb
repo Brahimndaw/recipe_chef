@@ -31,7 +31,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.create(recipe_params)
     if @recipe.save
       flash[:success] = "You have successfully created your recipe."
-      redirect_to recipes_path
+      redirect_to recipe_path(@recipe)
     else
       flash[:danger] = "Your recipe was not created, please try again."
       render :new

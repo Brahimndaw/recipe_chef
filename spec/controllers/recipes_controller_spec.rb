@@ -38,11 +38,16 @@ RSpec.describe RecipesController, type: :controller do
   end
 
   describe 'POST #create' do
+
+    # before(:all) do
+    #   @new_recipe = FactoryGirl.build(:recipe)
+    # end
+
     context 'valid recipe params' do
-      it 'creates the recipe and redirects to recipe path' do
+      it 'creates the recipe and redirects to its recipe path' do
         post :create, :recipe => {'title' => 'beef'}
         expect(controller).to set_flash[:success]
-        expect(response).to redirect_to(recipes_path)
+        expect(response).to redirect_to(assigns(:recipe))
       end
     end
     context 'invalid recipe params' do
@@ -60,7 +65,7 @@ RSpec.describe RecipesController, type: :controller do
     end
 
     context 'valid recipe params' do
-      it 'edits the recipe and redirects to recipe path' do
+      it 'edits the recipe and redirects to its recipe path' do
         patch :update, :id => @existing_recipe.id, :recipe => {'title' => 'beef'}
         expect(controller).to set_flash[:success]
         expect(response).to redirect_to(recipe_path(@existing_recipe))
@@ -71,6 +76,16 @@ RSpec.describe RecipesController, type: :controller do
         patch :update, :id => @existing_recipe.id, :recipe => {'title' => nil}
         expect(controller).to set_flash[:danger]
       end
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    it 'destroys the recipe and redirects to recipes path' do
+      @existing_recipe = FactoryGirl.create(:recipe)
+      expect{
+        delete :destroy, :id => @existing_recipe.id
+      }.to change(Recipe, :count).by(-1)
+      expect(response).to redirect_to(recipes_path)
     end
   end
 
