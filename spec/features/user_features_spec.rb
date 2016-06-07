@@ -20,9 +20,9 @@ fill_in("user[email]", :with=> 'Mario@lg.com')
 fill_in('user[password]', :with => "password")
 fill_in('user[password_confirmation]', :with => "password")
 click_button('Submit')
-expect(page).to have_content("Mario")
-expect(page).to have_content("Mario@lg.com")
 expect(page).to have_content("superm")
+expect(page).to have_content("Recipes")
+expect(page).to have_content("Create a recipe")
 end
 
 
@@ -45,9 +45,9 @@ def user_login
     fill_in('username', :with => "lui")
     fill_in('password', :with => "password")
     click_button('login')
-    expect(page).to have_content("Luigo")
-    expect(page).to have_content("lui")
-    expect(page).to have_content("lui@lg.com")
+    expect(page).to have_content("Chefs")
+    expect(page).to have_content("Recipes")
+    expect(page).to have_content("Log Out")
   end
 
 

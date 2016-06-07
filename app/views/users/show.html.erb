@@ -19,10 +19,12 @@ Skills  : <%= rating_for @user, "skills",  disable_after_rate: false %>
 </div>
   <% @user.recipes.each do |recipe| %>
 
-    <div class="col-md-4" align="center">
-  <%= link_to recipe.title, recipe_path(recipe) %><br>
+    <div class="col-md-4" align="left">
+  <%= link_to recipe.title, recipe_path(recipe) %> <%= rating_for recipe, "speed" %>
+  <br>
   <p> Tags: <%= raw recipe.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
   <br>
+
 </div><!-- end col-md-4 -->
   <% end %>
   <% end %>

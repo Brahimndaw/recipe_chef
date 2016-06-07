@@ -5,5 +5,5 @@ class Recipe < ActiveRecord::Base
   belongs_to :user
   acts_as_taggable
   acts_as_taggable_on :chicken, :fish, :seafood, :meat, :others
-  ratyrate_rateable "speed", "taste", "cost"
+  ratyrate_rateable "delizioso"
 end
