@@ -3,8 +3,9 @@ class RecipesController < ApplicationController
   before_action :find_recipe, only: [:show, :edit, :update, :destroy]
 
   def search
-    @recipes = SearchCreator.create_search(params)
-    if @recipes.nil?
+    @recipes = SearchCreator.create_search(search_term)
+    @search_term = search_term
+    if @recipes.empty?
       flash[:danger] = "Sorry, no results"
       redirect_to recipes_path
     end
@@ -60,11 +61,15 @@ end
 private
 
   def recipe_params
-    params.require(:recipe).permit(:video_url, :title, :description, :tag_list)
+    params.require(:recipe).permit(:video_url, :title, :description, :tag_list, {pics: []})
   end
 
   def find_recipe
     @recipe = Recipe.find(params[:id])
+  end
+
+  def search_term
+    params[:q]
   end
 
 end

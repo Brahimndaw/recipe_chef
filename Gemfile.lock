@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/carrierwaveuploader/carrierwave.git
+  revision: b31f7ce006bade550be0ad946d0b993b799358e3
+  specs:
+    carrierwave (0.11.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
+
+GIT
   remote: git://github.com/wazery/ratyrate.git
   revision: 61487c4726c06748218fe082f85e5a253b69e225
   specs:
@@ -168,6 +177,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rmagick (2.15.4)
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -242,6 +252,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
   capybara
+  carrierwave!
   coffee-rails (~> 4.1.0)
   factory_girl_rails
   figaro
@@ -256,6 +267,7 @@ DEPENDENCIES
   rails_serve_static_assets
   ratyrate!
   rest-client
+  rmagick
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
