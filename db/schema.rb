@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607030054) do
+ActiveRecord::Schema.define(version: 20160607183246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,10 @@ ActiveRecord::Schema.define(version: 20160607030054) do
     t.float    "avg",           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "overall_averages", force: :cascade do |t|
@@ -62,8 +66,8 @@ ActiveRecord::Schema.define(version: 20160607030054) do
   end
 
   create_table "recipe_amounts", force: :cascade do |t|
-    t.integer "recipes_id"
-    t.integer "ingredients_id"
+    t.integer "recipe_id"
+    t.integer "ingredient_id"
   end
 
   create_table "recipes", force: :cascade do |t|
