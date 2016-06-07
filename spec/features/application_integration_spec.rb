@@ -11,7 +11,9 @@ require 'spec_helper'
 
  describe 'POST /search - Search function' do
 
-   let(:recipe) {Recipe.create(name: "plantain")}
+   before(:each) do
+     @recipe = Recipe.create(title: "plantain")
+   end
 
    def user_login
        @luigi = User.create(
@@ -30,7 +32,6 @@ require 'spec_helper'
 
     it 'searches titles' do
       user_login
-      # binding.pry
       fill_in(:q, :with => 'plantain')
       find('#search-submit').click
       expect(page).to have_text("plantain")
