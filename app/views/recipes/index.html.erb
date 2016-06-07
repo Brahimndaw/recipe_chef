@@ -12,7 +12,7 @@
 <font size="6"> <%= link_to recipe.title, recipe %><br></font>
 <a href="<%= recipe_path(recipe)%>"> <iframe src="<%= recipe.video_url%>" width="350" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
 <br>
-
+<%= recipe.time %>
 <%= rating_for recipe, "delizioso" %>
 <p> <%= raw recipe.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 <br>

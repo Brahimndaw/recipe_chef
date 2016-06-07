@@ -25,7 +25,7 @@ comozonet = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php
 comozoney = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758790521040256%2F&show_text=0&width=560", title: "Pizza Bomb", description: "", tag_list: "Meat", time: "35 minutes", length: "Fast")
 comozoneu = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758761067709868%2F&show_text=0&width=560", title: "Puff Pastry", description: "", tag_list: "Dessert", time:"40 minutes", length: "Fast")
 comozonei = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758404151078893%2F&show_text=0&width=560", title: "Balsamic Chicken", description: "", tag_list: "Chicken", time: "1H55 minutes", length: "Medium")
-cosmopo =   Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1756889384563703%2F&show_text=0&width=560", title: "Chicken & Rice", description: "", tag_list: "Chicken", time: "1H35 minutes", , length: "Medium")
+cosmopo =   Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1756889384563703%2F&show_text=0&width=560", title: "Chicken & Rice", description: "", tag_list: "Chicken", time: "1H35 minutes", length: "Medium")
 
 
 luigi = User.create(username: "Luigi Mario",name: "Luigi", email: "luigi@luigi.com", password_digest: "beef", image_url: "https://sickr.files.wordpress.com/2013/11/luigi-circle.jpg")
