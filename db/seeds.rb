@@ -21,9 +21,11 @@ comozone7 = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php
 comozonee = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedpropertasty%2Fvideos%2F1791137911098881%2F&show_text=0&width=560", title: "Lamb Kofta", description: "", tag_list: "Lamb")
 comozoner = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1759124257673549%2F&show_text=0&width=560", title: "Carrot Roses", description: "", tag_list: "Healthy")
 comozonet = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1759094511009857%2F&show_text=0&width=560", title: "Choco Star Bread", description: "", tag_list: "Dessert")
-comozoney = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758790521040256%2F&show_text=0&width=560", title: "Pizza bomb", description: "", tag_list: "Meat")
+comozoney = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758790521040256%2F&show_text=0&width=560", title: "Pizza Bomb", description: "", tag_list: "Meat")
 comozoneu = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758761067709868%2F&show_text=0&width=560", title: "Puff Pastry", description: "", tag_list: "Dessert")
 comozonei = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758404151078893%2F&show_text=0&width=560", title: "Balsamic Chicken", description: "", tag_list: "Chicken")
+cosmopo =   Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1756889384563703%2F&show_text=0&width=560", title: "Chicken & Rice", description: "", tag_list: "Chicken")
+
 
 luigi = User.create(username: "Luigi Mario",name: "Luigi", email: "luigi@luigi.com", password_digest: "beef", image_url: "https://upload.wikimedia.org/wikipedia/en/f/f1/LuigiNSMBW.png")
 anthony = User.create(username:"Abourdain" , name:"Anthony Bourdain", email: "abourdain@cnn.com", password_digest: "beef", image_url: "http://comicsalliance.com/files/2012/06/bordainnoshadow.jpg")
