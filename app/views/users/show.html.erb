@@ -1,23 +1,26 @@
 <div class="col-md-9 content">
-
   <div class="page">
     <article>
       <div class="page-header page-header-resume">
        <h2><%= @user.username%></h2>
         <img src="<%= @user.image_url%>" alt="" title="" />
+         <div class="row" align="center">
+         <br>
+        <%= link_to "Create a recipe", new_recipe_path, class: "btn btn-primary" %>
+     </div> <!-- end row -->
       </div><!-- end page-header -->
 
 <div class="row" align ="center">
-Skills  : <%= rating_for @user, "skills",  disable_after_rate: false %>
-
+  <h3> Chef Rating : <%= rating_for @user, "skills",  disable_after_rate: false %>
+</h3>
   <div class="row">
     <% if @user.recipes %>
+    <h1></h1>
       <div class="page-header page-header-resume">
-      <div class="row" align="center">
-        <%= link_to "Create a recipe", new_recipe_path, class: "btn btn-primary" %>
-     </div> <!-- end row -->
-    <h1>Recipes</h1>
+     
+    
   </div>
+   <h2>Recipes</h2>
 </div>
   <% @user.recipes.each do |recipe| %>
 
