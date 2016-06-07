@@ -18,7 +18,6 @@ class UsersController < ApplicationController
         flash[:success] = "Welcome to recipe chef"
         redirect_to @user
       else
-        flash[:danger] = "Please match your passwords"
         redirect_to new_user_path
       end
   end
