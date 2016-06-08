@@ -39,10 +39,6 @@ RSpec.describe RecipesController, type: :controller do
 
   describe 'POST #create' do
 
-    # before(:all) do
-    #   @new_recipe = FactoryGirl.build(:recipe)
-    # end
-
     context 'valid recipe params' do
       it 'creates the recipe and redirects to its recipe path' do
         post :create, :recipe => {'title' => 'beef'}
@@ -72,7 +68,7 @@ RSpec.describe RecipesController, type: :controller do
       end
     end
     context 'invalid recipe params' do
-      it 'does not create the recipe' do
+      it 'does not edit the recipe' do
         patch :update, :id => @existing_recipe.id, :recipe => {'title' => nil}
         expect(controller).to set_flash[:danger]
       end

@@ -10,16 +10,15 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-
   def create
     @user = User.new(user_params)
-      if @user.save
-        session[:user_id] = @user.id
-        flash[:success] = "Welcome to recipe chef"
-        redirect_to @user
-      else
-        redirect_to new_user_path
-      end
+    if @user.save
+      session[:user_id] = @user.id
+      flash[:success] = "Welcome to Recipe Chef!"
+      redirect_to @user
+    else
+      redirect_to new_user_path
+    end
   end
 
   def show
@@ -30,17 +29,18 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:success]= "You have succesfully updated your user"
+      flash[:success]= "You have succesfully updated your user info"
       redirect_to @user
     else
-      flash[:danger] = "Update failed please check your paramters"
+      flash[:danger] = "Update failed, please check your parameters"
+      render :edit
     end
   end
- 
- def destroy
-  @user.destroy
-  redirect_to root_url
-end
+
+   def destroy
+     @user.destroy
+     redirect_to root_url
+   end
 
   private
 
