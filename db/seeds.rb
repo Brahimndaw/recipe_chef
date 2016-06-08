@@ -8,7 +8,7 @@
 
 
 ole_recipe = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1760948114157830%2F&show_text=0&width=560", title: "Banana Cake",
-  description: "", tag_list: "Desert", time: "45 minutes", length:"Fast")
+  description: "", tag_list: "Dessert", time: "45 minutes", length:"Fast")
 dumbaya = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedpropertasty%2Fvideos%2F1791781734367832%2F&show_text=0&width=560", title: "Mallow Doughnut", description: "", tag_list: "Snack", time: "50 minutes", length:"Fast")
 comozone = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1760899044162737%2F&show_text=0&width=560", title: "Shrimp Pasta", description:
   "3 gousses d’ail, 2 piments rouges, 4 c. à soupe de purée de tomate, 5 cl d’huile d’arachide,2 verres d'eau tiéde sel, poivre", tag_list: "Seafood", time: "1H25 minutes", length: "Medium" )
@@ -21,9 +21,9 @@ comozone7 = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php
   )
 comozonee = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedpropertasty%2Fvideos%2F1791137911098881%2F&show_text=0&width=560", title: "Lamb Kofta", description: "", tag_list: "Lamb", time: "75 minutes", length: "Medium")
 comozoner = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1759124257673549%2F&show_text=0&width=560", title: "Carrot Roses", description: "", tag_list: "Healthy", time: "1H05 minutes", length: "Medium")
-comozonet = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1759094511009857%2F&show_text=0&width=560", title: "Choco Star Bread", description: "", tag_list: "Desert", time: "45 minutes", length: "Fast")
+comozonet = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1759094511009857%2F&show_text=0&width=560", title: "Choco Star Bread", description: "", tag_list: "Dessert", time: "45 minutes", length: "Fast")
 comozoney = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758790521040256%2F&show_text=0&width=560", title: "Pizza Bomb", description: "", tag_list: "Meat", time: "35 minutes", length: "Fast")
-comozoneu = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758761067709868%2F&show_text=0&width=560", title: "Puff Pastry", description: "", tag_list: "Desert", time:"40 minutes", length: "Fast")
+comozoneu = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758761067709868%2F&show_text=0&width=560", title: "Puff Pastry", description: "", tag_list: "Dessert", time:"40 minutes", length: "Fast")
 comozonei = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1758404151078893%2F&show_text=0&width=560", title: "Balsamic Chicken", description: "", tag_list: "Chicken", time: "1H55 minutes", length: "Medium")
 cosmopo =   Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1756889384563703%2F&show_text=0&width=560", title: "Chicken & Rice", description: "", tag_list: "Chicken", time: "1H35 minutes", length: "Medium")
 
