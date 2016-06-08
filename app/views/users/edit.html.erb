@@ -1,4 +1,8 @@
 <h1> <img src="http://www.public-domain-photos.com/free-cliparts-4/computer/actions/edit_user.png" height="175" width="175"> </h1>
 
-<%= render 'form' %>
-
+<%= render 'form' %><br>
+<div class="row">
+  <div class= "col-md-4">
+<%= link_to "Delete User", user_path, method: :delete, class:"btn btn-danger", data: {confirm: "Are you sure?"} %>
+</div>
+</div>

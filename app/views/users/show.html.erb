@@ -37,7 +37,9 @@
   <% end %>  
 </div><!-- end row -->
 <div class="row" align="center">
+<% if current_user %>
 <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-warning"%>
+<% end %>
 </div>
 </div>
 </article><!-- end article -->

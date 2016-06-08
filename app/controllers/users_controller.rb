@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @users = User.all
@@ -36,7 +36,11 @@ class UsersController < ApplicationController
       flash[:danger] = "Update failed please check your paramters"
     end
   end
-
+ 
+ def destroy
+  @user.destroy
+  redirect_to root_url
+end
 
   private
 
