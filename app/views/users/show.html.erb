@@ -6,7 +6,9 @@
         <img src="<%= @user.image_url%>" alt="" title="" />
          <div class="row" align="center">
          <br>
+         <% if current_user %>
         <%= link_to "Create a recipe", new_recipe_path, class: "btn btn-primary" %>
+        <% end %>
      </div> <!-- end row -->
       </div><!-- end page-header -->
 
@@ -27,7 +29,7 @@
     <div class="col-md-4" align="left">
   <%= link_to recipe.title, recipe_path(recipe) %> <%= rating_for recipe, "delizioso" %>
   <br>
-  <p> <%= raw recipe.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+  <p> Tags: <%= raw recipe.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
   <br>
 
 </div><!-- end col-md-4 -->
