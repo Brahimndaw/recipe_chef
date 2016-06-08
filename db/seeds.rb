@@ -28,15 +28,15 @@ comozonei = Recipe.create(video_url: "https://www.facebook.com/plugins/video.php
 cosmopo =   Recipe.create(video_url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fbuzzfeedtasty%2Fvideos%2F1756889384563703%2F&show_text=0&width=560", title: "Chicken & Rice", description: "", tag_list: "Chicken", time: "1H35 minutes", length: "Medium")
 
 
-luigi = User.create(username: "Luigi Mario",name: "Luigi", email: "luigi@luigi.com", password_digest: "beef", image_url: "https://sickr.files.wordpress.com/2013/11/luigi-circle.jpg")
-anthony = User.create(username:"Abourdain" , name:"Anthony Bourdain", email: "abourdain@cnn.com", password_digest: "beef", image_url: "http://comicsalliance.com/files/2012/06/bordainnoshadow.jpg")
-stella = User.create(username:"Stella", name: "Stella Morevecci", email: "stella@torino.com", password_digest:"beef", image_url:"http://classroomclipart.com/images/gallery/Clipart/Culinary/TN_lady-with-a-covered-food-tray-clipart-5122.jpg")
-dominec = User.create(username:"Dominec", name: "dominec Glasgow", email: "domi@gmail.com", password_digest: "beef", image_url: "https://www.fivesquid.com/pics/t2/1440941227-44593-3-1.png")
-mario = User.create(username: "Mario", name: "Mario Mario", email: "mario@mario.com", password_digest: "beef", image_url: "http://i0.kym-cdn.com/entries/icons/original/000/008/585/super-mario.jpeg")
-michelle = User.create(username:"Mich", name:"Michelle Pfeiffer", email: "mich@yahoo.com", password_digest: "beef", image_url:"http://www.toonpool.com/user/10854/files/michelle_pfeiffer_portrait_1285995.jpg")
-coolio = User.create(username: "Coolio", name: "Coolio Budz", email: "Coolio@yahoo.com", password_digest:"beef", image_url:"http://orig09.deviantart.net/1035/f/2014/269/0/5/lord_wilhelm_cartoon_self_portrait_by_lordwilhelm-d80kmo4.jpg")
-allez = User.create(username: "Van", name: "Vancoci Doningo", email: "vamos@cnn.com", password_digest: "beef", image_url: "https://www.fivesquid.com/pics/t2/1440941227-44593-4-1.png")
-cainfri = User.create(username: "koidio", name: "Yapi Yapa", email: "garcon@abidjan.net", password_digest: "poulet", image_url:"https://ehotelier.com/wp-content/uploads/2016/05/Chef-Francis-Chong-Wui-Choong-.jpg")
+luigi = User.create(username: "Luigi Mario",name: "Luigi", email: "luigi@luigi.com", password: "beef", password_confirmation: "beef", image_url: "https://sickr.files.wordpress.com/2013/11/luigi-circle.jpg")
+anthony = User.create(username:"Abourdain" , name:"Anthony Bourdain", email: "abourdain@cnn.com", password: "beef", password_confirmation: "beef", image_url: "http://comicsalliance.com/files/2012/06/bordainnoshadow.jpg")
+stella = User.create(username:"Stella", name: "Stella Morevecci", email: "stella@torino.com", password:"beef", password_confirmation: "beef", image_url:"http://classroomclipart.com/images/gallery/Clipart/Culinary/TN_lady-with-a-covered-food-tray-clipart-5122.jpg")
+dominec = User.create(username:"Dominec", name: "dominec Glasgow", email: "domi@gmail.com", password: "beef", password_confirmation: "beef", image_url: "https://www.fivesquid.com/pics/t2/1440941227-44593-3-1.png")
+mario = User.create(username: "Mario", name: "Mario Mario", email: "mario@mario.com", password: "beef", password_confirmation: "beef",image_url: "http://i0.kym-cdn.com/entries/icons/original/000/008/585/super-mario.jpeg")
+michelle = User.create(username:"Mich", name:"Michelle Pfeiffer", email: "mich@yahoo.com", password: "beef", password_confirmation: "beef", image_url:"http://www.toonpool.com/user/10854/files/michelle_pfeiffer_portrait_1285995.jpg")
+coolio = User.create(username: "Coolio", name: "Coolio Budz", email: "Coolio@yahoo.com", password:"beef", password_confirmation:"beef", image_url:"http://orig09.deviantart.net/1035/f/2014/269/0/5/lord_wilhelm_cartoon_self_portrait_by_lordwilhelm-d80kmo4.jpg")
+allez = User.create(username: "Van", name: "Vancoci Doningo", email: "vamos@cnn.com", password: "beef", password_confirmation: "beef", image_url: "https://www.fivesquid.com/pics/t2/1440941227-44593-4-1.png")
+cainfri = User.create(username: "koidio", name: "Yapi Yapa", email: "garcon@abidjan.net", password: "poulet", password_confirmation: "poulet", image_url:"https://ehotelier.com/wp-content/uploads/2016/05/Chef-Francis-Chong-Wui-Choong-.jpg")
 
 mario.recipes << ole_recipe
 mario.recipes << dumbaya
