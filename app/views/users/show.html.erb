@@ -27,7 +27,7 @@
     <div class="col-md-4" align="left">
   <%= link_to recipe.title, recipe_path(recipe) %> <%= rating_for recipe, "delizioso" %>
   <br>
-  <p> Tags: <%= raw recipe.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+  <p> <%= raw recipe.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
   <br>
 
 </div><!-- end col-md-4 -->
