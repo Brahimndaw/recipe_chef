@@ -7,11 +7,9 @@
   <div class="right-info">
     <h1>Welcome to Recipe Chefs! Hmmm</h1>
     <div class="center">
-    <% if current_user %>
+    <% if !current_user %>
      <font size= "10"><%= link_to "Sign in", signin_path, {:style=>'color:#0000FF;', :class => "css_class"} %></font>
-     <% end%>
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     <% if !current_user %>
       <font size= "10"><%= link_to "Sign up", new_user_path, {:style => 'color:#0000FF;', :class => "css_class"} %></font>
     </div>
     <% end %>
