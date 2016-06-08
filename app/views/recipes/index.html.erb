@@ -7,7 +7,7 @@
 </div>
 <br><br>
 <div class="row" id="recipe-list">
-<% @recipes.all.each do |recipe| %>
+<% @recipes.sort_by{|recipe| recipe.created_at}.reverse.each do |recipe| %>
   <div class="col-md-4" align="center" id="individual-recipe">
 <font size="6"> <%= link_to recipe.title, recipe %><br></font>
 <a href="<%= recipe_path(recipe)%>"> <iframe src="<%= recipe.video_url%>" width="350" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>

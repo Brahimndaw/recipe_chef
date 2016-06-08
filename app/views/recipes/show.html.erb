@@ -13,7 +13,9 @@
 <article>
 </div>
 <br><br>
+<% if current_user %>
 <font size="5"><b><u>Delizioso : <%= rating_for_user @recipe, current_user, "delizioso",  disable_after_rate: false %></b></u></font>
+<% end %>
 <br><br>
 <div class="row" align="middle">
 <%= link_to "Remove Recipe", recipe_path(@recipe), method: :delete, class: "btn btn-danger"%> 
