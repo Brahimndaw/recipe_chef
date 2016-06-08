@@ -35,7 +35,8 @@ dominec = User.create(username:"Dominec", name: "dominec Glasgow", email: "domi@
 mario = User.create(username: "Mario", name: "Mario Mario", email: "mario@mario.com", password_digest: "beef", image_url: "http://i0.kym-cdn.com/entries/icons/original/000/008/585/super-mario.jpeg")
 michelle = User.create(username:"Mich", name:"Michelle Pfeiffer", email: "mich@yahoo.com", password_digest: "beef", image_url:"http://www.toonpool.com/user/10854/files/michelle_pfeiffer_portrait_1285995.jpg")
 coolio = User.create(username: "Coolio", name: "Coolio Budz", email: "Coolio@yahoo.com", password_digest:"beef", image_url:"http://orig09.deviantart.net/1035/f/2014/269/0/5/lord_wilhelm_cartoon_self_portrait_by_lordwilhelm-d80kmo4.jpg")
-
+allez = User.create(username: "Van", name: "Vancoci Doningo", email: "vamos@cnn.com", password_digest: "beef", image_url: "https://www.fivesquid.com/pics/t2/1440941227-44593-4-1.png")
+cainfri = User.create(username: "koidio", name: "Yapi Yapa", email: "garcon@abidjan.net", password_digest: "poulet", image_url:"https://ehotelier.com/wp-content/uploads/2016/05/Chef-Francis-Chong-Wui-Choong-.jpg")
 
 mario.recipes << ole_recipe
 mario.recipes << dumbaya
@@ -60,3 +61,4 @@ stella.save
 dominec.save
 michelle.save
 coolio.save
+allez.save
