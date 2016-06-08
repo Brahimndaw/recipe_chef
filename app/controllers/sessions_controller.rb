@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  
+
   def new
     @user = User.new
     @user = User.all
@@ -7,14 +7,13 @@ class SessionsController < ApplicationController
 
 
   def create
-    binding.pry
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      flash[:success] = "Welcome to Chefs Recipes"
+      flash[:success] = "Welcome to Recipe Chefs!"
       redirect_to user_path(@user)
     else
-      flash[:danger] = "Your user or password are invalid"
+      flash[:danger] = "Your username or password is invalid"
       redirect_to signin_path
     end
   end
@@ -24,5 +23,5 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_url
   end
-  
+
 end

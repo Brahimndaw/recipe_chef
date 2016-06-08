@@ -1,15 +1,13 @@
-# describe SessionsController do
-#   it "rejects incorrect passwords" do
-#       @luigi = User.create(
-#         name: "Luigi",
-#         password: "password",
-#         username: "lui",
-#         email: 'lui@lg.com',
-#       )
-#       visit '/'
-#       click_link('Sign in')
-#       fill_in('username', :with => "lui")
-#       fill_in('password', :with => "wrongpassword")
-#       expect(current_path).to eq(signin_path)
-#   end
-# end
+require 'rails_helper'
+
+RSpec.describe SessionsController, type: :controller do
+
+  describe 'POST #create' do
+
+    it "rejects incorrect passwords" do
+      @test_user = FactoryGirl.create(:user)
+      post :create, :username => @test_user.username, :password => "wrongpassword"
+      expect(response).to redirect_to(signin_path)
+    end
+  end
+end
