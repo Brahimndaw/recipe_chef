@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_many :recipes
   has_many :ratings
   has_many :pics
+  has_many :comments
 
   has_secure_password
 

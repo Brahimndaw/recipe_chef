@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users
   resources :recipes
   resources :ingredients
+  resources :comments
 
   get '/search-form', to: 'home#search_form'
   post '/search', to: 'recipes#search'

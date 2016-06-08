@@ -1,25 +1,48 @@
-<div class="row" align="center">
-<div class= "col-md-8">
-<br>
-<br>
+<div class="col-md-9 content">
+  <div class="page" align="center">
 <iframe src="<%= @recipe.video_url%>" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-<div class"img" align="center">
-<h2> <u> Dish Name</u></h2>
+
+<div class"description" align="center">
+<h2><u>Dish Name</u></h2>
 <font size="5"><%= @recipe.title %></font><br>
-<article>
-<h2> <u> Ingedients</u></h2>
-<p>
+<h2><u>Ingredients</u></h2>
 <font size="3"><u><%= @recipe.description %></u></font> 
-<article>
 </div>
+</div> <!-- end row -->
+</div><!-- end page-header -->
 <br><br>
+
+<div class="row" align="center">
+<div class="col-md-9" align="center">
 <% if current_user %>
 <font size="5"><b><u>Delizioso : <%= rating_for_user @recipe, current_user, "delizioso",  disable_after_rate: false %></b></u></font>
-<% end %>
 <br><br>
-<div class="row" align="middle">
+
 <%= link_to "Remove Recipe", recipe_path(@recipe), method: :delete, class: "btn btn-danger"%> 
-<%= link_to "Edit Recipe",  edit_recipe_path(@recipe), class: "btn btn-warning" %> 
+<%= link_to "Edit Recipe",  edit_recipe_path(@recipe), class: "btn btn-warning" %>
+<br>
+</div>
+</div>
+
+<div class="row" align="right">
+<div class="col-md-9" align="center">
+<h2><u> Reviews </u></h2>
+<% @recipe.comments.each do |comment| %>
+<b><%= comment.user.name%> says:<br></b>
+<%= comment.content%><br>
+<% end %><br>
+<div class="col-md-4">
+<div style="position: absolute; left: 100%; margin-center: 25px; width: 325px;">
+<%=form_for  @comment do |f|%>
+  <%= f.label :content, "Comments"%>:
+  <%= f.text_area :content, class: "form-control", data: {textarea: "comment"}%>
+  <%= f.hidden_field :recipe_id, value: @recipe.id %>
+  <%= f.submit "Submit", class: "btn btn-primary", data: {send: "comment"}%> 
+</div>
+</div>
+<%end%>
+</div>
+<%end%> 
 </div>
 </div>
 
