@@ -12,11 +12,7 @@ Rails.application.routes.draw do
   resources :ingredients
   resources :comments
 
-  get '/search-form', to: 'home#search_form'
-  post '/search', to: 'recipes#search'
-   get 'tags/:tag', to: 'recipes#index', as: :tag
-   get 'tags/show'
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

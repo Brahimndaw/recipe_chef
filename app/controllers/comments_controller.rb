@@ -12,6 +12,9 @@ class CommentsController < ApplicationController
   redirect_to recipe_path(@comment.recipe)
   end
 
+  def edit 
+  end
+
   private
   def comment_params
   params.require(:comment).permit(:id, :content, :recipe_id, :user_id)

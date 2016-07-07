@@ -33,9 +33,7 @@
               <ul class="nav navbar-nav filter-portfolio">
 
                 <li class="title">Tags</li>
-              <% TagDecorator.sorted.each do |tag| %>
-              <li><%= link_to tag.name, tag_path(tag.name) %> (<%= tag.taggings_count%>)</li>
-              <% end %>
+            
               </ul>
               <ul class="nav navbar-nav nav-social hidden-sm hidden-xs">
                 <li class="title">Social</li>
